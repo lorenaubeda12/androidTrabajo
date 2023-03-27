@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Activity.ValoracionProductoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/purple_500"
+                app:navigationIcon="@drawable/ic_volver_atras"
+                app:title="Valorar producto comprado"
+                app:titleTextColor="@color/white" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="¡Valorar producto!"
+                android:textColor="#00838F"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="183dp"
+                android:layout_margin="5dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="10dp">
+
+                <!--<ImageView
+                    android:id="@+id/imgProducto"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp" />-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/imgValorarProducto"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    fresco:placeholderImage="@drawable/user" />
+
+                <RelativeLayout
+                    android:layout_width="231dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/nombreProductoValoracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="Nombre"
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/descripValoracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nombreProductoValoracion"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Descripcion"
+                        android:textColor="#2e2e2e"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/precioValoracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/descripValoracion"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="precio"
+                        android:textColor="#2e2e2e"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/valoracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/precioValoracion"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Valoración: "
+                        android:textColor="#2e2e2e"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/spValoracion"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="34dp"
+                        android:entries="@array/valoraciones" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="39dp">
+
+                <Button
+                    android:id="@+id/btnGuardarValoracion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="0dp"
+                    android:backgroundTint="#558B2F"
+                    android:text="Guardar valoracion"
+                    android:textColor="#fff"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

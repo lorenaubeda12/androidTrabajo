@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    android:label="Mis productos a la venta"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.vinted_lorena.ui.home.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.vinted_lorena.ui.gallery.GalleryFragment"
+        android:label="Mis productos a la venta"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.vinted_lorena.ui.slideshow.SlideshowFragment"
+        android:label="Mis compras"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_valoracion"
+        android:name="com.example.vinted_lorena.ui.valoracion.ValoracionFragment"
+        android:label="Recomendaciones"
+        tools:layout="@layout/fragment_valoracion" />
+</navigation>

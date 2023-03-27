@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp">
+
+        <!--<ImageView
+            android:id="@+id/imgProducto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/my_image_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            fresco:placeholderImage="@drawable/user"
+            />
+
+        <RelativeLayout
+            android:layout_width="231dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/nombreProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:text="Nombre"
+                android:layout_marginBottom="1dp"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nombreProducto"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Descripcion"
+                android:textColor="#2e2e2e"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descrip"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="precio"
+                android:textColor="#2e2e2e"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnVer"
+                android:layout_width="77dp"
+                android:layout_height="31dp"
+                android:layout_alignParentRight="true"
+
+                android:layout_alignParentBottom="true"
+
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:backgroundTint="#00BCD4"
+                android:text="Ver"
+                android:textColor="#fff"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
